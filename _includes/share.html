@@ -1,0 +1,12 @@
+<a class="twitter" href="https://twitter.com/intent/tweet?text={{ site.domain_name }}{{ page.url }} - {{page.title}} by @{{ site.authorTwitter }}"><i class="fa fa-twitter-square"></i> Tweet</a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><i class="fa fa-facebook-official"></i> Share
+</a>
+
+<a class="weibo" href="http://service.weibo.com/share/share.php?url={{ page.url }}&title={{ page.title }}"><i class="fa fa-weibo"></i> Weibo
+</a>
