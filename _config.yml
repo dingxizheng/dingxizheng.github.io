@@ -4,20 +4,21 @@ meta_description: "Coffeer's Footprint"
 
 aboutPage: true
 
-markdown: redcarpet
+# markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 paginate: 20
 baseurl: /
 domain_name: 'http://dingxizheng.com'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-65945808-1'
 disqus: true
 disqus_shortname: 'coffeerme'
 
 # Details for the RSS feed generator
-url:            'http://coffeer.me'
+url:            'http://dingxizheng.com'
 author:         'Coffeer'
-authorTwitter:  'YourTwitterUsername'
+authorTwitter:  'dingxizheng'
 
 permalink:       /:year/:title/
 

@@ -3,20 +3,34 @@
   <channel>
     <title>Coffeer</title>
     <description>A Big Little World</description>
-    <link>http://coffeer.me</link>
-    <atom:link href="http://coffeer.me/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://dingxizheng.com</link>
+    <atom:link href="http://dingxizheng.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>How to Make General Condition-Based Query Engine For Mongoid Models</title>
+        
+        
+          <description>&lt;p&gt;Building websites and json-based apis with rails is great. Rails provides wonderful tools to help build a fully functional websites by runing a few lines of commands. &lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 03 Aug 2015 06:18:00 -0400</pubDate>
+        <link>http://dingxizheng.com/2015/make-conditions-based-query-engine-for-mongoid/</link>
+        <guid isPermaLink="true">http://dingxizheng.com/2015/make-conditions-based-query-engine-for-mongoid/</guid>
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
         
         
-          <description>&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+          <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
 To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
 </description>
         
         <pubDate>Sun, 10 Nov 2013 05:18:00 -0500</pubDate>
-        <link>http://coffeer.me/2013/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://coffeer.me/2013/welcome-to-jekyll/</guid>
+        <link>http://dingxizheng.com/2013/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://dingxizheng.com/2013/welcome-to-jekyll/</guid>
       </item>
     
   </channel>
