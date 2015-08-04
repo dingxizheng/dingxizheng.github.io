@@ -1,6 +1,6 @@
 name: Coffeer
 description: A Big Little World
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+meta_description: "Coffeer's Footprint"
 
 aboutPage: true
 
@@ -15,7 +15,7 @@ disqus: true
 disqus_shortname: 'coffeerme'
 
 # Details for the RSS feed generator
-url:            'http://coffeer.me'
+url:            'http://dingxizheng.com'
 author:         'Coffeer'
 authorTwitter:  'YourTwitterUsername'
 
