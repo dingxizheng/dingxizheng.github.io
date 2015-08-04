@@ -3,8 +3,8 @@
   <channel>
     <title>Coffeer</title>
     <description>A Big Little World</description>
-    <link>http://dingxizheng.com</link>
-    <atom:link href="http://dingxizheng.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://coffeer.me</link>
+    <atom:link href="http://coffeer.me/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Welcome to Jekyll!</title>
@@ -15,8 +15,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 </description>
         
         <pubDate>Sun, 10 Nov 2013 05:18:00 -0500</pubDate>
-        <link>http://dingxizheng.com/2013/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://dingxizheng.com/2013/welcome-to-jekyll/</guid>
+        <link>http://coffeer.me/2013/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://coffeer.me/2013/welcome-to-jekyll/</guid>
       </item>
     
   </channel>

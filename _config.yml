@@ -9,13 +9,13 @@ highlighter: pygments
 
 paginate: 20
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
+domain_name: 'http://dingxizheng.com'
 google_analytics: 'UA-XXXXXXXX-X'
 disqus: true
 disqus_shortname: 'coffeerme'
 
 # Details for the RSS feed generator
-url:            'http://dingxizheng.com'
+url:            'http://coffeer.me'
 author:         'Coffeer'
 authorTwitter:  'YourTwitterUsername'
 
