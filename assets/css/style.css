@@ -313,10 +313,11 @@ pre	{
 }
 
 code {
+	background-color: rgb(255, 234, 239);
 	color: brown;
     border-radius: 3px;
     margin: 0 4px;
-    padding: 2px;
+    padding: 2px 5px;
     /*border: #5badf0 1px solid;*/
 }
 
