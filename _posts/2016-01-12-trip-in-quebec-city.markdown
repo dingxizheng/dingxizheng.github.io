@@ -5,18 +5,24 @@ description: This is log of our trip in Quebec City during the Christmas vacatio
 tags: ["Quebec", "Trip", "Quebec City"]
 ---
 
-In angular $resource, if we want to cache results, we set `cache` as `true` in method definitions:
-{% highlight javascript %}
-$resource('/api/users/:userId', {
-	userId: '@id'
-}, {
-	get: {
-		cache: true, // set as true, the result will be cached
-		method: 'GET'
-	}
-});
-{% endhighlight %}
+######Day One - Dec 25, 2015
 
-On the way back to Montreal:
+>![photo two](/assets/images/trip_in_quebec/P1010732.jpg)
+>Beautiful sunset at Toronto Airport
 
-<iframe src="https://onedrive.live.com/embed?cid=59F8FF03DFAAF5B7&resid=59F8FF03DFAAF5B7%21110557&authkey=AAg_G7mcUpZ3xz4" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen></iframe>
+>![photo two](/assets/images/trip_in_quebec/P1010734.jpg)
+>Night view from Mount Royal
+
+>![photo two](/assets/images/trip_in_quebec/IMG_1618.jpg)
+>Miao
+
+######Day Tow - Dec 26, 2015
+
+>![photo two](/assets/images/trip_in_quebec/IMG_1635.jpg)
+>Sunny day morning at front door a old brunch restaurant
+
+######Day Four - Dec 19, 2015
+>The day back to Montreal, the whole Quebec was "welcoming" it's real snow-season.
+>This was what we got on that day on the highway:
+>
+><iframe src="https://onedrive.live.com/embed?cid=59F8FF03DFAAF5B7&resid=59F8FF03DFAAF5B7%21110557&authkey=AAg_G7mcUpZ3xz4" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
