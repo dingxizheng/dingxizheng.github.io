@@ -20,6 +20,16 @@ tags: ["Quebec", "Trip", "Quebec City"]
 
 >![photo two](/assets/images/trip_in_quebec/IMG_1635.jpg)
 >Sunny day morning at front door of an old brunch restaurant
+>
+>![photo two](/assets/images/trip_in_quebec/IMG_1673.jpg)
+>City hall of Montreal
+>
+>![photo two](/assets/images/trip_in_quebec/IMG_1647.jpg)
+>Notre-Dame Basilica of Montreal - oppsite of city hall
+
+######Day Three - Dec 27, 2015
+>![photo two](/assets/images/trip_in_quebec/IMG_1690.jpg)
+>Had our brunch at a Turkish restaurant
 
 ######Day Four - Dec 19, 2015
 >The day back to Montreal, the whole Quebec was "welcoming" it's real snow-season.
