@@ -9,17 +9,17 @@ tags: ["Quebec", "Trip", "Quebec City"]
 
 >![photo two](/assets/images/trip_in_quebec/P1010732.jpg)
 >Beautiful sunset at Toronto Airport
-
+>
 >![photo two](/assets/images/trip_in_quebec/P1010734.jpg)
 >Night view from Mount Royal
-
+>
 >![photo two](/assets/images/trip_in_quebec/IMG_1618.jpg)
 >Miao
 
-######Day Tow - Dec 26, 2015
+######Day Two - Dec 26, 2015
 
 >![photo two](/assets/images/trip_in_quebec/IMG_1635.jpg)
->Sunny day morning at front door a old brunch restaurant
+>Sunny day morning at front door of an old brunch restaurant
 
 ######Day Four - Dec 19, 2015
 >The day back to Montreal, the whole Quebec was "welcoming" it's real snow-season.
