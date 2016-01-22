@@ -27,26 +27,26 @@ Include the `Mongoid::Likeable` module into the models you want to like
 
 Include the `Mongoid::Liker` module into the user model
 
-```ruby
+{% highlight ruby %}
 class User
   include Mongoid::Document
   include Mongoid::Liker
 
 end
-```
+{% endhighlight %}
 
 
-```ruby
+{% highlight ruby %}
 class Post
   include Mongoid::Document
   include Mongoid::Likeable
 
 end
-```
+{% endhighlight %}
 
 Now you can `like` or `dislike` your `posts`.
 
-```ruby
+{% highlight ruby %}
 @user.like @post # user likes a post
 
 @user.unlike @post # user unlikes a post liked before
@@ -54,32 +54,32 @@ Now you can `like` or `dislike` your `posts`.
 @user.dislike @post # user dislikes a post
 
 @user.undislike @post # user undislike a post disliked before
-```
+{% endhighlight %}
 
 Note that a likeable resource can not be liked and dislied by the same user at the same time
 
-```ruby
+{% highlight ruby %}
 @user.like @post_one #=> user likes a post
 
 @user.dislike @post_one #=> will return false
-```
+{% endhighlight %}
 
-```ruby
+{% highlight ruby %}
 @user.dislike @post_one #=> user dislikes a post
 
 @user.like @post_one #=> will return false
-```
+{% endhighlight %}
 
 To get how many likes or dislikes a resource have 
 
-```ruby
+{% highlight ruby %}
 @post.likes #=> number of likes current post have
 @post.dislikes #=> number of dislikes current post have
-```
+{% endhighlight %}
 
 To check if user liked of disliked a resource
 
-```ruby
+{% highlight ruby %}
 @post.liked_by? @user
 
 @user.liked? @post
@@ -87,24 +87,24 @@ To check if user liked of disliked a resource
 @post.disliked_by? @user 
 
 @user.disliked? @user
-```
+{% endhighlight %}
 
 To get a resource's `likers` and `dislikers`
 
-```ruby
+{% highlight ruby %}
 @post.likers #=> results in Mongoid::Criteria
 @post.lkiers.where(....)
 
 @post.dislikers #=> results in Mongoid::Criteria
 @post.dislkiers.where(....)
-```
+{% endhighlight %}
 
 To get specified `type` of objects user liked or disliked
 
-```ruby
+{% highlight ruby %}
 @user.all_liked :post #=> results in Mongoid::Criteria
 
 @user.all_liked :blabla #=> return nil, since model 'blabla' does not exist
 
 @user.all_disliked :post #=> results in Mongoid::Criteria
-```
+{% endhighlight %}
