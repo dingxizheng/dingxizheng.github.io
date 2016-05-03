@@ -2,9 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Coffeer</title>
-    <description>A Big Little World</description>
+    <description>where coffer says to himself</description>
     <link>http://dingxizheng.com</link>
     <atom:link href="http://dingxizheng.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>mongoid likes gem</title>
+        
+        
+          <description>&lt;p&gt;Please refer https://github.com/dingxizheng/mongoid_likes&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 22 Jan 2016 05:18:00 -0500</pubDate>
+        <link>http://dingxizheng.com/2016/mongoid-likes-gem/</link>
+        <guid isPermaLink="true">http://dingxizheng.com/2016/mongoid-likes-gem/</guid>
+      </item>
+    
+      <item>
+        <title>Footprint in Quebec City</title>
+        
+        
+          <description>&lt;h6 id=&quot;day-one---dec-25-2015&quot;&gt;Day One - Dec 25, 2015&lt;/h6&gt;
+
+</description>
+        
+        <pubDate>Tue, 12 Jan 2016 05:18:00 -0500</pubDate>
+        <link>http://dingxizheng.com/2016/trip-in-quebec-city/</link>
+        <guid isPermaLink="true">http://dingxizheng.com/2016/trip-in-quebec-city/</guid>
+      </item>
     
       <item>
         <title>How to Refresh $resource after Update Actions in AngularJS</title>
@@ -54,19 +80,6 @@
         <pubDate>Mon, 03 Aug 2015 06:18:00 -0400</pubDate>
         <link>http://dingxizheng.com/2015/beautiful-guitar-solo-wind-song/</link>
         <guid isPermaLink="true">http://dingxizheng.com/2015/beautiful-guitar-solo-wind-song/</guid>
-      </item>
-    
-      <item>
-        <title>Footprint in Quebec City</title>
-        
-        
-          <description>&lt;h6 id=&quot;day-one---dec-25-2015&quot;&gt;Day One - Dec 25, 2015&lt;/h6&gt;
-
-</description>
-        
-        <pubDate>Mon, 12 Jan 2015 05:18:00 -0500</pubDate>
-        <link>http://dingxizheng.com/2015/trip-in-quebec-city/</link>
-        <guid isPermaLink="true">http://dingxizheng.com/2015/trip-in-quebec-city/</guid>
       </item>
     
       <item>

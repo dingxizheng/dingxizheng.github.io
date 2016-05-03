@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Coffeer - mongoid likes gem</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href='/'> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href='/about'>About </a>
+        
+    
+    <a class="cta" href="/feed.xml">Subscribe</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>mongoid likes gem</h1>
+        <h2 class="headline">January 22, 2016</h2>
+    </header>
+    <section id="post-body">
+        <p>Please refer https://github.com/dingxizheng/mongoid_likes</p>
+
+<p>This Gem extends your Mongoid user model to have like and dislike abilities 
+to any likeable models</p>
+
+<h2 id="how-to-install">How to install</h2>
+
+<p>Install the gem</p>
+
+<pre><code>$ gem install mongoid-likes
+</code></pre>
+
+<p>or add the gem to your <code>Gemfile</code></p>
+
+<pre><code>gem 'mongoid-likes'
+</code></pre>
+
+<h2 id="how-to-use">How to use</h2>
+
+<p>Include the <code>Mongoid::Likeable</code> module into the models you want to like </p>
+
+<p>Include the <code>Mongoid::Liker</code> module into the user model</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">User</span>
+  <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Document</span>
+  <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Liker</span>
+
+<span class="k">end</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Post</span>
+  <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Document</span>
+  <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Likeable</span>
+
+<span class="k">end</span></code></pre></div>
+
+<p>Now you can <code>like</code> or <code>dislike</code> your <code>posts</code>.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@user</span><span class="o">.</span><span class="n">like</span> <span class="vi">@post</span> <span class="c1"># user likes a post</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">unlike</span> <span class="vi">@post</span> <span class="c1"># user unlikes a post liked before</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">dislike</span> <span class="vi">@post</span> <span class="c1"># user dislikes a post</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">undislike</span> <span class="vi">@post</span> <span class="c1"># user undislike a post disliked before</span></code></pre></div>
+
+<p>Note that a likeable resource can not be liked and dislied by the same user at the same time</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@user</span><span class="o">.</span><span class="n">like</span> <span class="vi">@post_one</span> <span class="c1">#=&gt; user likes a post</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">dislike</span> <span class="vi">@post_one</span> <span class="c1">#=&gt; will return false</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@user</span><span class="o">.</span><span class="n">dislike</span> <span class="vi">@post_one</span> <span class="c1">#=&gt; user dislikes a post</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">like</span> <span class="vi">@post_one</span> <span class="c1">#=&gt; will return false</span></code></pre></div>
+
+<p>To get how many likes or dislikes a resource have </p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@post</span><span class="o">.</span><span class="n">likes</span> <span class="c1">#=&gt; number of likes current post have</span>
+<span class="vi">@post</span><span class="o">.</span><span class="n">dislikes</span> <span class="c1">#=&gt; number of dislikes current post have</span></code></pre></div>
+
+<p>To check if user liked of disliked a resource</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@post</span><span class="o">.</span><span class="n">liked_by?</span> <span class="vi">@user</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">liked?</span> <span class="vi">@post</span>
+
+<span class="vi">@post</span><span class="o">.</span><span class="n">disliked_by?</span> <span class="vi">@user</span> 
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">disliked?</span> <span class="vi">@user</span></code></pre></div>
+
+<p>To get a resource’s <code>likers</code> and <code>dislikers</code></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@post</span><span class="o">.</span><span class="n">likers</span> <span class="c1">#=&gt; results in Mongoid::Criteria</span>
+<span class="vi">@post</span><span class="o">.</span><span class="n">lkiers</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">.</span><span class="p">)</span>
+
+<span class="vi">@post</span><span class="o">.</span><span class="n">dislikers</span> <span class="c1">#=&gt; results in Mongoid::Criteria</span>
+<span class="vi">@post</span><span class="o">.</span><span class="n">dislkiers</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">.</span><span class="p">)</span></code></pre></div>
+
+<p>To get specified <code>type</code> of objects user liked or disliked</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@user</span><span class="o">.</span><span class="n">all_liked</span> <span class="ss">:post</span> <span class="c1">#=&gt; results in Mongoid::Criteria</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">all_liked</span> <span class="ss">:blabla</span> <span class="c1">#=&gt; return nil, since model &#39;blabla&#39; does not exist</span>
+
+<span class="vi">@user</span><span class="o">.</span><span class="n">all_disliked</span> <span class="ss">:post</span> <span class="c1">#=&gt; results in Mongoid::Criteria</span></code></pre></div>
+
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/dingxizheng">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Coffeer</span>
+            <span>where coffer says to himself</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://dingxizheng.com/2016/mongoid-likes-gem/ - mongoid likes gem by @dingxizheng"><i class="fa fa-twitter-square"></i> Tweet</a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><i class="fa fa-facebook-official"></i> Share
+</a>
+
+<a class="weibo" href="http://service.weibo.com/share/share.php?url=/2016/mongoid-likes-gem/&title=mongoid likes gem"><i class="fa fa-weibo"></i> Weibo
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'coffeerme';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+    <ul id="post-list" class="archive readmore">
+        <h3>Read more</h3>
+        
+            <li>
+                <a href="/2016/mongoid-likes-gem/">mongoid likes gem<aside class="dates">Jan 22</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2016/trip-in-quebec-city/">Footprint in Quebec City<aside class="dates">Jan 12</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2015/uncache-angular-resource-after-certain-actions/">How to Refresh $resource after Update Actions in AngularJS<aside class="dates">Aug 04</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2015/make-conditions-based-query-engine-for-mongoid/">How to Make General Condition-Based Query Engine For Mongoid Models<aside class="dates">Aug 03</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2015/beautiful-guitar-solo-wind-song/">Wind Song - Guitar Solo<aside class="dates">Aug 03</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2013/welcome-to-jekyll/">Welcome to Jekyll!<aside class="dates">Nov 10</aside></a>
+            </li>
+        
+    </ul>
+
+
+<footer id="footer">
+    <p class="small">© Copyright 2016 Coffeer</p>
+</footer>
+
+
+
+
+  </section>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-65945808-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+
